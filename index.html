@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    
+<body class="background-main">
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Logo</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active">Rozvrh</a>
+            <a href="#" class="nav-item">Známky</a>
+            <a href="#" class="nav-item">Úlohy</a>
+            <a href="#" class="nav-item">Nastavenia</a>
+        </nav>
+    </aside>
+
+    <div class="wrapper">
+        <header class="header">
+            <h1>Example</h1>
+        </header>
+
+        <main class="main-content">
+            <section class="card full-width">
+                <div class="card-header">
+                    <h3>Rozvrh hodín</h3>
+                </div>
+                <div class="card-body">
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="card-header">
+                    <h3>Známky</h3>
+                </div>
+                <div class="card-body">
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="card-header">
+                    <h3>Domáce úlohy</h3>
+                </div>
+                <div class="card-body">
+                </div>
+            </section>
+        </main>
+    </div>
+
 </body>
 </html>
