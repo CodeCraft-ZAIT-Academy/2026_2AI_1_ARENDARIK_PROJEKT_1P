@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout</title>
+    <title>Úvod - SchoolFlow</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="1x1-logo-schoolflow.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="background-main">
 
+    <input type="checkbox" id="toggleLeft" class="toggle-checkbox">
+    <input type="checkbox" id="toggleRight" class="toggle-checkbox">
+
     <aside class="sidebar">
         <div class="sidebar-header">
-            <h2>Logo</h2>
+            <img src="header-logo-schoolflow.png" alt="Logo" class="logo-img">
         </div>
         <nav class="sidebar-nav">
-            <a href="#" class="nav-item active">Rozvrh</a>
-            <a href="#" class="nav-item">Známky</a>
-            <a href="#" class="nav-item">Úlohy</a>
-            <a href="#" class="nav-item">Nastavenia</a>
+            <a href="#" class="nav-item active">Úvod</a>
+            <a href="hub.html" class="nav-item">Rozvrh</a>
         </nav>
     </aside>
 
     <div class="wrapper">
         <header class="header">
-            <h1>Example</h1>
+            <label for="toggleLeft" class="toggle-btn">☰</label>
+            <label for="toggleRight" class="toggle-btn">></label>
         </header>
 
         <main class="main-content">
@@ -31,13 +34,50 @@
                 <div class="card-header">
                     <h3>Rozvrh hodín</h3>
                 </div>
-                <div class="card-body">
+                <div class="card-body schedule-grid">
+                    <div class="schedule-column">
+                        <span class="schedule-label">0</span>
+                        <input type="text" class="schedule-input" placeholder="Predmet">
+                    </div>
+                    <div class="schedule-column">
+                        <span class="schedule-label">1</span>
+                        <input type="text" class="schedule-input" placeholder="Predmet">
+                    </div>
+                    <div class="schedule-column">
+                        <span class="schedule-label">2</span>
+                        <input type="text" class="schedule-input" placeholder="Predmet">
+                    </div>
+                    <div class="schedule-column">
+                        <span class="schedule-label">3</span>
+                        <input type="text" class="schedule-input" placeholder="Predmet">
+                    </div>
+                    <div class="schedule-column">
+                        <span class="schedule-label">4</span>
+                        <input type="text" class="schedule-input" placeholder="Predmet">
+                    </div>
+                    <div class="schedule-column">
+                        <span class="schedule-label">5</span>
+                        <input type="text" class="schedule-input" placeholder="Predmet">
+                    </div>
+                    <div class="schedule-column">
+                        <span class="schedule-label">6</span>
+                        <input type="text" class="schedule-input" placeholder="Predmet">
+                    </div>
+                    <div class="schedule-column">
+                        <span class="schedule-label">7</span>
+                        <input type="text" class="schedule-input" placeholder="Predmet">
+                    </div>
+                    <div class="schedule-column">
+                        <span class="schedule-label">8</span>
+                        <input type="text" class="schedule-input" placeholder="Predmet">
+                    </div>
                 </div>
             </section>
 
             <section class="card">
                 <div class="card-header">
                     <h3>Známky</h3>
+                    <button class="add-btn">+</button>
                 </div>
                 <div class="card-body">
                 </div>
@@ -46,12 +86,34 @@
             <section class="card">
                 <div class="card-header">
                     <h3>Domáce úlohy</h3>
+                    <button class="add-btn">+</button>
                 </div>
                 <div class="card-body">
                 </div>
             </section>
         </main>
     </div>
+
+    <aside class="sidebar-right">
+        <div class="sidebar-header right-header">
+            <h2>Písomky</h2>
+            <button class="add-btn">+</button>
+        </div>
+        <div class="sidebar-content">
+            <div class="exam-item">
+                <span class="exam-subject">Example1</span>
+                <span class="exam-date">DatumExample, 12. 11.</span>
+            </div>
+            <div class="exam-item">
+                <span class="exam-subject">Example2</span>
+                <span class="exam-date">DatumExample, 13. 11.</span>
+            </div>
+            <div class="exam-item">
+                <span class="exam-subject">Example3</span>
+                <span class="exam-date">DatumExample, 14. 11.</span>
+            </div>
+        </div>
+    </aside>
 
 </body>
 </html>

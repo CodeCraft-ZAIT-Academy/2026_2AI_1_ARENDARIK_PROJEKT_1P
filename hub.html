@@ -1,11 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rozvrh - SchoolFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="1x1-logo-schoolflow.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    
+<body class="background-main">
+
+    <input type="checkbox" id="toggleLeft" class="toggle-checkbox">
+    <input type="checkbox" id="toggleRight" class="toggle-checkbox">
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="header-logo-schoolflow.png" alt="Logo" class="logo-img">
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">Úvod</a>
+            <a href="#" class="nav-item active">Rozvrh</a>
+        </nav>
+    </aside>
+
+    <div class="wrapper">
+        <header class="header">
+            <label for="toggleLeft" class="toggle-btn">☰</label>
+            <label for="toggleRight" class="toggle-btn">></label>
+        </header>
+
+        <main class="main-content-full">
+            <section class="card full-width">
+                <div class="card-header">
+                    <h3>Rozvrh hodín</h3>
+                </div>
+                <div class="card-body">
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <aside class="sidebar-right">
+        <div class="sidebar-header right-header">
+            <h2>Písomky</h2>
+            <button class="add-btn">+</button>
+        </div>
+        <div class="sidebar-content">
+            <div class="exam-item">
+                <span class="exam-subject">Example1</span>
+                <span class="exam-date">DatumExample, 12. 11.</span>
+            </div>
+            <div class="exam-item">
+                <span class="exam-subject">Example2</span>
+                <span class="exam-date">DatumExample, 13. 11.</span>
+            </div>
+            <div class="exam-item">
+                <span class="exam-subject">Example3</span>
+                <span class="exam-date">DatumExample, 14. 11.</span>
+            </div>
+        </div>
+    </aside>
+
 </body>
 </html>

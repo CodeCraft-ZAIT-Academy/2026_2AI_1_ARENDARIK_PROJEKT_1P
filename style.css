@@ -18,6 +18,32 @@
     border-right: 1px solid #334155;
     display: flex;
     flex-direction: column;
+    transition: width 0.25s ease, opacity 0.2s ease;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#toggleLeft:checked ~ .sidebar {
+    width: 0;
+    opacity: 0;
+    border-right: none;
+}
+
+#toggleRight:checked ~ .sidebar-right {
+    width: 0;
+    opacity: 0;
+    border-left: none;
+}
+
+.sidebar-right {
+    width: 200px;
+    background-color: #1E293B;
+    border-left: 1px solid #334155;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: width 0.25s ease, opacity 0.2s ease;
+    white-space: nowrap;
 }
 
 .sidebar-header {
@@ -26,11 +52,12 @@
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #334155;
+    padding: 0 10px;
 }
 
 .sidebar-header h2 {
     font-size: 15px;
-    color: #38BDF8;
+    color: white;
 }
 
 .sidebar-nav {
@@ -38,6 +65,34 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+
+.sidebar-content {
+    padding: 10px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.exam-item {
+    background-color: #334155;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border-left: 3px solid #38BDF8;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.exam-subject {
+    font-size: 13px;
+    font-weight: 600;
+    color: #F8FAFC;
+}
+
+.exam-date {
+    font-size: 11px;
+    color: #94A3B8;
 }
 
 .nav-item {
@@ -56,8 +111,9 @@
 }
 
 .nav-item.active {
-    background-color: #38BDF8;
-    color: #0F172A;
+    background-color: #334155;
+    color: white;
+    border-left: 3px solid #38BDF8;
     font-weight: 600;
 }
 
@@ -65,6 +121,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .header {
@@ -73,7 +130,7 @@
     border-bottom: 1px solid #334155;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0 16px;
 }
 
@@ -88,6 +145,14 @@
     padding: 16px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 3fr;
+    gap: 12px;
+}
+
+.main-content-full {
+    flex: 1;
+    padding: 16px;
+    display: grid;
     gap: 12px;
 }
 
@@ -108,6 +173,119 @@
     color: #F8FAFC;
 }
 
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .card-body {
     margin-top: 8px;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 5px;
+    margin-top: 12px;
+}
+
+.schedule-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.schedule-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #38BDF8;
+}
+
+.schedule-input {
+    background-color: #1E293B;
+    color: #F8FAFC;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    padding: 18px 6px;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+}
+
+.schedule-intput:focus {
+    outline: none;
+    border-color: #38BDF8;
+}
+
+.schedule-input::-webkit-inner-spin-button,
+.schedule-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.sidebar-header.right-header {
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.add-btn {
+    background-color: #38BDF8;
+    color: #0F172A;
+    border: none;
+    border-radius: 6px;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.add-btn:hover {
+    background-color: #7dd4fc6c;
+}
+
+.toggle-btn {
+    background-color: #334155;
+    color: #F8FAFC;
+    border: none;
+    border-radius: 6px;
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #7dd4fc6c;
+    color: #0f172a;
+}
+
+.sidebar-header {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #334155;
+    padding: 0 10px;
+}
+
+.logo-img {
+    max-height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+.toggle-checkbox {
+    display: none;
 }
