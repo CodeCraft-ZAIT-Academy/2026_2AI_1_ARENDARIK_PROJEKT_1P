@@ -5,11 +5,18 @@
     font-family: 'Inter', Arial, sans-serif;
 }
 
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
 .background-main {
     background-color: #0F172A;
     color: #F8FAFC;
     display: flex;
     min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .sidebar {
@@ -90,6 +97,12 @@
     color: #F8FAFC;
 }
 
+.exam-theme {
+    font-size: 10px;
+    color: #94A3B8;
+    margin-left: 6px;
+}
+
 .exam-date {
     font-size: 11px;
     color: #94A3B8;
@@ -144,9 +157,11 @@
     flex: 1;
     padding: 16px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 3fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto minmax(0, 1fr);
     gap: 12px;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .main-content-full {
@@ -162,6 +177,11 @@
     padding: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
 }
 
 .full-width {
@@ -181,13 +201,111 @@
 
 .card-body {
     margin-top: 8px;
+    overflow-y: hidden;
+}
+
+/* Umožní vnútorné zvislé scrollovanie bez natiahnutia celej stránky */
+.grades-scroll {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    padding-right: 4px;
+    
+}
+
+.grades-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.grades-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grade-row {
+    background-color: #1E293B;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border-left: 3px solid #38BDF8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.grade-subject-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.grade-subject {
+    font-size: 13px;
+    font-weight: 600;
+    color: #F8FAFC;
+}
+
+.grade-avg {
+    font-size: 11px;
+    color: #94A3B8;
+}
+
+.grade-badges {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.grade-badge {
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #334155;
+    color: #F8FAFC;
+}
+
+/* Jemné farebné odlíšenie známok */
+.grade-badge.g-1 {
+    color: #38BDF8;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.grade-badge.g-2 {
+    color: #4ADE80;
+    border: 1px solid rgba(74, 222, 128, 0.35);
+}
+
+.grade-badge.g-3 {
+    color: #FACC15;
+    border: 1px solid rgba(250, 204, 21, 0.35);
+}
+
+.grade-badge.g-4 {
+    color: #cf6801;
+    border: 1px solid rgba(207, 104, 1, 1);
+}
+
+.grade-badge.g-5 {
+    color: #F87171;
+    border: 1px solid rgba(248, 113, 113, 0.35);
 }
 
 .schedule-grid {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    gap: 5px;
+    display: flex;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    gap: 10px;
     margin-top: 12px;
+    padding-bottom: 8px;
 }
 
 .schedule-column {
@@ -195,12 +313,20 @@
     flex-direction: column;
     align-items: center;
     gap: 4px;
+    flex: 0 0 84px;
 }
 
 .schedule-label {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     color: #38BDF8;
+}
+
+.schedule-time {
+    font-size: 11px;
+    font-weight: 500;
+    color: #94A3B8;
+    white-space: nowrap;
 }
 
 .schedule-input {
@@ -208,10 +334,11 @@
     color: #F8FAFC;
     border: 1px solid #475569;
     border-radius: 6px;
-    padding: 18px 6px;
-    font-size: 16px;
+    padding: 6px;
+    font-size: 13px;
     text-align: center;
     width: 100%;
+    aspect-ratio: 1 / 1;
 }
 
 .schedule-intput:focus {
@@ -244,6 +371,48 @@
     align-items: center;
     justify-content: center;
     transition: background-color 0.2s ease;
+}
+
+.homework-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.homework-item {
+    background-color: #1E293B;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border-left: 3px solid #38BDF8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.homework-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.homework-subject {
+    font-size: 13px;
+    font-weight: 600;
+    color: #F8FAFC;
+}
+
+.homework-due {
+    font-size: 11px;
+    color: #94A3B8;
+}
+
+.homework-task {
+    font-size: 12px;
+    font-weight: 500;
+    color: #38BDF8;
+    text-align: right;
 }
 
 .add-btn:hover {
