@@ -1,0 +1,215 @@
+.main-content {
+    flex: 1;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 16px;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.schedule-daily-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    gap: 14px;
+    margin-top: 12px;
+    padding-bottom: 6px;
+    min-width: 0;
+}
+
+.schedule-daily-column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    flex: 1 1 0;
+    min-width: 84px;
+}
+
+.daily-schedule-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    width: 100%;
+    padding: 2px 0 5px 0;
+    border-bottom: 1px solid #475569;
+    min-width: 0;
+}
+
+.schedule-daily-label {
+    font-size: 19px;
+    font-weight: 700;
+    color: #38BDF8;
+}
+
+.schedule-daily-time {
+    font-size: 13px;
+    font-weight: 500;
+    color: #94A3B8;
+    white-space: nowrap;
+}
+
+.schedule-daily-input {
+    background-color: #1E293B;
+    color: #F8FAFC;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    height: 92px;
+}
+
+.schedule-daily-input:focus {
+    outline: none;
+    border-color: #38BDF8;
+}
+
+.schedule-daily-input::-webkit-inner-spin-button,
+.schedule-daily-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.card-body.grades-scroll {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    padding-right: 4px;
+    scrollbar-width: none;
+}
+
+.card-body.grades-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.grades-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.grade-row {
+    background-color: #1E293B;
+    padding: 11px 14px;
+    border-radius: 6px;
+    border-left: 3px solid #38BDF8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.grade-subject-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.grade-subject {
+    font-size: 16px;
+    font-weight: 600;
+    color: #F8FAFC;
+}
+
+.grade-avg {
+    font-size: 13px;
+    color: #94A3B8;
+}
+
+.grade-badges {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.grade-badge {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #334155;
+    color: #F8FAFC;
+}
+
+.grade-badge.g-1 {
+    color: #38BDF8;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.grade-badge.g-2 {
+    color: #4ADE80;
+    border: 1px solid rgba(74, 222, 128, 0.35);
+}
+
+.grade-badge.g-3 {
+    color: #FACC15;
+    border: 1px solid rgba(250, 204, 21, 0.35);
+}
+
+.grade-badge.g-4 {
+    color: #cf6801;
+    border: 1px solid rgba(207, 104, 1, 1);
+}
+
+.grade-badge.g-5 {
+    color: #F87171;
+    border: 1px solid rgba(248, 113, 113, 0.35);
+}
+
+.homework-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.homework-item {
+    background-color: #1E293B;
+    padding: 11px 14px;
+    border-radius: 6px;
+    border-left: 3px solid #38BDF8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.homework-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.homework-subject {
+    font-size: 16px;
+    font-weight: 600;
+    color: #F8FAFC;
+}
+
+.homework-due {
+    font-size: 13px;
+    color: #94A3B8;
+}
+
+.homework-task {
+    font-size: 14px;
+    font-weight: 500;
+    color: #38BDF8;
+    text-align: right;
+}

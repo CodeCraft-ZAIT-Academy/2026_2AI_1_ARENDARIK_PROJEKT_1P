@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Úvod - SchoolFlow</title>
+    <link rel="stylesheet" href="style-index.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="1x1-logo-schoolflow.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -32,53 +33,72 @@
         <main class="main-content">
             <section class="card full-width">
                 <div class="card-header">
-                    <h3>Rozvrh hodín</h3>
+                    <h3>Dnešný rozvrh hodín</h3>
                 </div>
-                <div class="card-body schedule-grid">
-                    <div class="schedule-column">
-                        <span class="schedule-label">0</span>
-                        <input type="text" class="schedule-input" placeholder="Predmet">
-                        <span class="schedule-time">7:00 - 7:45</span>
+                <div class="card-body schedule-daily-grid">
+                    <div class="schedule-daily-column">
+                        <div class="daily-schedule-header">
+                            <span class="schedule-daily-label">0</span>
+                            <span class="schedule-daily-time">7:00 - 7:45</span>
+                        </div>
+                        <input type="text" class="schedule-daily-input" placeholder="Predmet">
+                        
                     </div>
-                    <div class="schedule-column">
-                        <span class="schedule-label">1</span>
-                        <input type="text" class="schedule-input" placeholder="Predmet">
-                        <span class="schedule-time">7:50 - 8:35</span>
+                    <div class="schedule-daily-column">
+                        <div class="daily-schedule-header">
+                            <span class="schedule-daily-label">1</span>
+                            <span class="schedule-daily-time">7:45 - 7:50</span>
+                        </div>
+                        <input type="text" class="schedule-daily-input" placeholder="Predmet">
                     </div>
-                    <div class="schedule-column">
-                        <span class="schedule-label">2</span>
-                        <input type="text" class="schedule-input" placeholder="Predmet">
-                        <span class="schedule-time">8:40 - 9:25</span>
+                    <div class="schedule-daily-column">
+                        <div class="daily-schedule-header">
+                            <span class="schedule-daily-label">2</span>
+                            <span class="schedule-daily-time">8:40 - 9:25</span>
+                        </div>
+                        <input type="text" class="schedule-daily-input" placeholder="Predmet">
                     </div>
-                    <div class="schedule-column">
-                        <span class="schedule-label">3</span>
-                        <input type="text" class="schedule-input" placeholder="Predmet">
-                        <span class="schedule-time">9:30 - 10:15</span>
+                    <div class="schedule-daily-column">
+                        <div class="daily-schedule-header">
+                            <span class="schedule-daily-label">3</span>
+                            <span class="schedule-daily-time">9:30 - 10:15</span>
+                        </div>
+                        <input type="text" class="schedule-daily-input" placeholder="Predmet">
                     </div>
-                    <div class="schedule-column">
-                        <span class="schedule-label">4</span>
-                        <input type="text" class="schedule-input" placeholder="Predmet">
-                        <span class="schedule-time">10:35 - 11:05</span>
+                    <div class="schedule-daily-column">
+                        <div class="daily-schedule-header">
+                            <span class="schedule-daily-label">4</span>
+                            <span class="schedule-daily-time">10:35 - 11:05</span>
+                        </div>
+                        <input type="text" class="schedule-daily-input" placeholder="Predmet">
                     </div>
-                    <div class="schedule-column">
-                        <span class="schedule-label">5</span>
-                        <input type="text" class="schedule-input" placeholder="Predmet">
-                        <span class="schedule-time">11:10 - 12:05</span>
+                    <div class="schedule-daily-column">
+                        <div class="daily-schedule-header">
+                            <span class="schedule-daily-label">5</span>
+                            <span class="schedule-daily-time">11:10 - 12:05</span>
+                        </div>
+                        <input type="text" class="schedule-daily-input" placeholder="Predmet">
                     </div>
-                    <div class="schedule-column">
-                        <span class="schedule-label">6</span>
-                        <input type="text" class="schedule-input" placeholder="Predmet">
-                        <span class="schedule-time">12:35 - 12:20</span>
+                    <div class="schedule-daily-column">
+                        <div class="daily-schedule-header">
+                            <span class="schedule-daily-label">6</span>
+                            <span class="schedule-daily-time">12:35 - 12:20</span>
+                        </div>
+                        <input type="text" class="schedule-daily-input" placeholder="Predmet">
                     </div>
-                    <div class="schedule-column">
-                        <span class="schedule-label">7</span>
-                        <input type="text" class="schedule-input" placeholder="Predmet">
-                        <span class="schedule-time">12:25 - 13:10</span>
+                    <div class="schedule-daily-column">
+                        <div class="daily-schedule-header">
+                            <span class="schedule-daily-label">7</span>
+                            <span class="schedule-daily-time">12:25 - 13:10</span>
+                        </div>
+                        <input type="text" class="schedule-daily-input" placeholder="Predmet">
                     </div>
-                    <div class="schedule-column">
-                        <span class="schedule-label">8</span>
-                        <input type="text" class="schedule-input" placeholder="Predmet">
-                        <span class="schedule-time">13:15 - 14:00</span>
+                    <div class="schedule-daily-column">
+                        <div class="daily-schedule-header">
+                            <span class="schedule-daily-label">8</span>
+                            <span class="schedule-daily-time">13:15 - 14:00</span>
+                        </div>
+                        <input type="text" class="schedule-daily-input" placeholder="Predmet">
                     </div>
                 </div>
             </section>
@@ -201,7 +221,7 @@
                     <span class="homework-subject">Matematika</span>
                     <span class="homework-due">do piatku, 20. 11.</span>
                 </div>
-                <span class="homework-task">Cvičenia str. 42/1–5</span>
+                <span class="homework-task">Cvičenia str. 42/1 – 5</span>
             </div>
             <div class="homework-item">
                 <div class="homework-info">

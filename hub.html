@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rozvrh - SchoolFlow</title>
+    <link rel="stylesheet" href="style-hub.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="1x1-logo-schoolflow.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -29,15 +30,131 @@
             <label for="toggleRight" class="toggle-btn">></label>
         </header>
 
-        <main class="main-content-full">
-            <section class="card full-width">
-                <div class="card-header">
-                    <h3>Rozvrh hodín</h3>
-                </div>
-                <div class="card-body">
-                </div>
-            </section>
-        </main>
+            <main class="main-content-full">
+                <section class="card full-width weekly-card">
+                    <div class="card-header">
+                        <h3>Týždenný rozvrh</h3>
+                    </div>
+                    <div class="card-body weekly-scroll">
+                        <div class="weekly-grid">
+
+                            <div class="weekly-corner"></div>
+                            <div class="period-header">
+                                <span class="period-num">0</span>
+                                <span class="period-time">7:00 - 7:45</span>
+                            </div>
+                            <div class="period-header">
+                                <span class="period-num">1</span>
+                                <span class="period-time">7:50 - 8:35</span>
+                            </div>
+                            <div class="period-header">
+                                <span class="period-num">2</span>
+                                <span class="period-time">8:40 - 9:25</span>
+                            </div>
+                            <div class="period-header">
+                                <span class="period-num">3</span>
+                                <span class="period-time">9:30 - 10:15</span>
+                            </div>
+                            <div class="period-header">
+                                <span class="period-num">4</span>
+                                <span class="period-time">10:35 - 11:05</span>
+                            </div>
+                            <div class="period-header">
+                                <span class="period-num">5</span>
+                                <span class="period-time">11:10 - 12:05</span>
+                            </div>
+                            <div class="period-header">
+                                <span class="period-num">6</span>
+                                <span class="period-time">12:35 - 12:20</span>
+                            </div>
+                            <div class="period-header">
+                                <span class="period-num">7</span>
+                                <span class="period-time">12:25 - 13:10</span>
+                            </div>
+                            <div class="period-header">
+                                <span class="period-num">8</span>
+                                <span class="period-time">13:15 - 14:00</span>
+                            </div>
+
+                            <!-- PONDELOK -->
+                            <div class="day-cell">
+                                <span class="day-name">Po</span>
+                                <span class="day-date">23. 11.</span>
+                            </div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+
+                            <!-- UTOROK -->
+                            <div class="day-cell">
+                                <span class="day-name">Ut</span>
+                                <span class="day-date">24. 11.</span>
+                            </div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+
+                            <!-- STREDA -->
+                            <div class="day-cell">
+                                <span class="day-name">St</span>
+                                <span class="day-date">25. 11.</span>
+                            </div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+
+                            <!-- ŠTVRTOK -->
+                            <div class="day-cell">
+                                <span class="day-name">Št</span>
+                                <span class="day-date">26. 11.</span>
+                            </div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+
+                            <!-- PIATOK -->
+                            <div class="day-cell">
+                                <span class="day-name">Pi</span>
+                                <span class="day-date">27. 11.</span>
+                            </div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+                            <div class="lesson-cell"><input type="text" class="lesson-input" placeholder="Predmet"></div>
+
+                        </div>
+                    </div>
+                </section>
+            </main>
     </div>
 
     <aside class="sidebar-right">
